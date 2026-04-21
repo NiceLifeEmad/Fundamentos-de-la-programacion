@@ -7,3 +7,5 @@ if num>0:
         print ("Uno de los numeros es negativo")
 else:
     print ("El numero es negativo")
+ 
+ 
