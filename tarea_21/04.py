@@ -15,18 +15,21 @@
 #     print("Usuario creado con exito")
 
 pin=int(input("Ingrese su pin: "))
+
 #incorrecto
-if len(pin)==4:
-    print("PIN creado con exito")
-else:
-    print("PIN invalido")
+# if len(pin)==4:
+#     print("PIN creado con exito")
+# else:
+#     print("PIN invalido")
+
 #Forma correcta 1
-if 1000<pin <9999:
-    print("PIN creado con exito")
-else:
-    print("PIN invalido")
+# if 1000<pin <9999:
+#     print("PIN creado con exito")
+# else:
+#     print("PIN invalido")
+
 #Forma correcta 2
-if len(str(pin))==4:
-    print("PIN creado con exito")
-else:
-    print("PIN invalido")
+# if len(str(pin))==4:
+#     print("PIN creado con exito")
+# else:
+#     print("PIN invalido")
