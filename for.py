@@ -47,7 +47,7 @@
 # if llueve:
 #     print("Saca el paraguas")
 # else:
-#     print("Puede andar en polera")
+#     print("Puede andar en polera") 
 
 
 
@@ -107,3 +107,17 @@
 
 # print(f"El total de vocales es {vocales}")
 # print(f"El total de consonantes es {conso}")
+
+#Cada letra desde la izquierda a la derecha partiendo desde 0 tiene un indice con valor numerico, 
+#esto mismo se aplica con numeros negativos pero desde la derecha a la izquierda
+# n=" Calonia"
+# name= "Alonso Robles"
+# print(name[0])
+# print(len(name)) #Muestra la cantdad de letras
+# print(n.strip()) #Ignora los espacios al inicio y final
+# print(name.upper()) #Solo visuyaliza
+# name=name.upper() #Cambia las leltras a mayuscula
+# print(name.lower()) #Solo visualiza
+# name=name.lower() #Cambia las letras a minuscula
+# print(name.replace("Robles", "Parra")) #Solo visualiza
+# name=name.replace("Robles", "Parra") #Reemplaza un valor por otro
