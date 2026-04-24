@@ -63,26 +63,79 @@ def division():
     num2=int(input("Ingrese el segundo valor: "))
     print(f"El resultado es {num1/num2}")   
 
-op=0
+# op=0
 
-while op!=5:
-    print("Que operacion desea realizar?")
-    print("1.- Suma")
-    print("2.- Resta")
-    print("3.- Multiplicacion")
-    print("4.- Division")
-    print("5.- Salir")
-    op=int(input("Selecione una opcion: "))
-    match op:
-        case 1:
-            suma()  
-        case 2:
-            resta()  
-        case 3:
-            multiplicacion()  
-        case 4:
-            division()
-        case 5:
-            print ("Saliendo")
-        case _:
-            print ("Opcion invalida")
+# while op!=5:
+#     print("Que operacion desea realizar?")
+#     print("1.- Suma")
+#     print("2.- Resta")
+#     print("3.- Multiplicacion")
+#     print("4.- Division")
+#     print("5.- Salir")
+#     op=int(input("Selecione una opcion: "))
+#     match op:
+#         case 1:
+#             suma()  
+#         case 2:
+#             resta()  
+#         case 3:
+#             multiplicacion()  
+#         case 4:
+#             division()
+#         case 5:
+#             print ("Saliendo")
+#         case _:
+#             print ("Opcion invalida")
+
+
+#Buscar 3 programas en python
+#y crearlos como funcion
+#llamarlos como funcion
+
+def votatoon():
+    can1=(input("Ingrese el candidato numero 1: "))
+    can2=(input("Ingrese el candidato numero 2: "))
+    votantes=int(input("Ingrese el numero de votantes: "))
+    vcan1=0
+    vcan2=0
+
+    for i in range (votantes):
+        voto=int(input(f"Por quien desea votar, 1. el candidato {can1} 2. el candidato {can2}? "))
+    if voto==1:
+        vcan1=vcan1+1
+    elif voto==2:
+        vcan2=vcan2+1
+    else:
+        print("Voto nulo")
+
+    if vcan1>vcan2:
+        print(f"Tras contar los votos, el ganador es: {can1} con {vcan1} votos")
+    elif vcan2>vcan1:
+        print(f"Tras contar los votos, el ganador es: {can2} con {vcan2} votos")
+    else:
+        print(f"Ha habido un empate entre ambos candidatos con un total de {vcan1} para {can1} y {vcan2} para {can2}")
+
+# votatoon()
+
+def PIN():
+    pin=3232
+    baka=int(input("Ingrese su pin"))
+    while pin!=baka:
+        print("Pin Incorrecto")
+    baka=int(input("Ingrese su pin"))
+    print("PIN correcto")
+
+# PIN()
+
+def promedio():
+    notas=int(input("Cuantas notas son?: "))
+    prom=0
+    for i in range(notas):
+       print("Ingrese una nota: ")
+       sumN=float(input())
+       prom=sumN+prom
+    #    print(prom)
+
+    print("El promedio es:", round((prom/notas),1))
+
+# promedio()
