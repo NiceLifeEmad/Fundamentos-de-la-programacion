@@ -139,3 +139,9 @@ def promedio():
     print("El promedio es:", round((prom/notas),1))
 
 # promedio()
+
+# print multilinia
+
+print(" ''' Hola " \
+"buenas tardes " \
+"como se encuentra?'''")
