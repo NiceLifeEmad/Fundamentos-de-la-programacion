@@ -58,7 +58,6 @@ def agregarAuto(dic):
 
 
 
-
 # Buscar los datos de un auto por codigo
 def buscarAuto(dic, busca):
     if busca in dic:
@@ -102,8 +101,8 @@ def autos_vendidos_por_marca(dic, marca):
             if operaciones[id_auto][1] != 'Pendiente':
                 total += 1
     print(f'El número total de autos vendidos de la marca {marca.upper()} es {total}')
-
-autos_vendidos_por_marca(autos,"Chevrolet" )
+mar=input("Cual es la marca que desea buscar?: ")
+autos_vendidos_por_marca(autos,mar)
 
 def busqueda_por_anio(anio_min, anio_max):
     elementos_encontrados = []
