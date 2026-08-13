@@ -1,0 +1,58 @@
+
+
+## Problema 1
+
+# Una red transmite datos a 100 megabits por segundo. Crea una función utilizando Python que permita calcular la cantidad de datos 
+# transmitidos en una cierta cantidad de tiempo (en segundos). Luego utiliza la función y calcula cuántos datos se transmiten en:
+
+# 45 segundos
+# 1,5 minutos
+# 1 hora
+
+def f(a):
+    return 100*a
+
+# print(f"A los 45 segundos se transmiten {f(45)} mb.")
+# print(f"A los 1.5 segundos se transmiten {f(1.5*60)} mb.")
+# print(f"Luego de una hora se transmiten {f(1*60*60)} mb.")
+
+
+# Problema 2
+
+# Utilizando la función definida en el problema 1, 
+# genera un listado que muestre los datos transmitidos para tiempos desde 0 hasta 1.000 segundos 
+# con incrementos de 100 segundos.
+
+# for i in range(0,1001,100):
+#     print(f"A los {i} segundos, se han transmitido {f(i)} mb.")
+
+# Problema 3
+
+# La latencia de una red corresponde al tiempo que tarda un paquete de datos en viajar desde el punto de origen al destino. 
+# En otras palabras, es el tiempo que transcurre desde que se envía una solicitud de un dispositivo hasta que se recibe una respuesta 
+# del servidor u otro dispositivo.
+
+# La latencia puede verse afectada por la velocidad de transmisión de los datos a través de los cables o conexiones inalámbricas, 
+# la distancia física entre los dispositivos, el tiempo que tarda un computador en procesar o reenviar los datos, etc.
+
+# En redes de comunicación, como las videoconferencias, juegos en línea y transmisión de datos en tiempo real, 
+# es deseable una baja latencia, de lo contrario pueden existir retrasos en la comunicación y afectar negativamente la experiencia del 
+# usuario.
+
+# Según el contexto mencionado, crea una función en Python que permita calcular la latencia real de una red dada 
+# una latencia estimada. Suponga que la latencia real es un 20% mayor a la latencia estimada.
+
+# Calcule la latencia real para una latencia estimada de:
+
+# a)   200 milisegundos.
+
+# b)   149 milisegundos.
+
+# c)   74 milisegundos.
+
+def l(a):
+    return 1.2*a
+
+print(f"A los 200 milisegundos se transmiten {l(200)} mb.")
+print(f"A los 149 milisegundos se transmiten {l(149)} mb.")
+print(f"A los 74 milisegundos se transmiten {l(74)} mb.")
