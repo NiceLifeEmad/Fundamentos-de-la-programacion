@@ -1,3 +1,6 @@
+import numpy as np
+from scipy.optimize import fsolve
+
 ## Problema 1
 ## Escribe un código que pida al usuario ingresar un número real y determine si el número ingresado es positivo, negativo o cero.
 
@@ -70,11 +73,38 @@
 
 # print(f"El resultado de la multiplicacion redondeada al entero es: {redondeo(producto(n1, n2))}")
 
-## Problema 7
+# Problema 7
 ## Crear una funcion que que convierta celsius a farenheit redondeado a la centesima
 
-def f(a):
-    return (9/5)*a+32
+# def f(a):
+#     return (9/5)*a+32
 
-c=float(input("Ingresa la temperatura en °C: "))
-print(f"La temperatura en grados Farenheit es de {round(f(c),2)}")
+# c=float(input("Ingresa la temperatura en °C: "))
+# print(f"La temperatura en grados Farenheit es de {round(f(c),2)}")
+
+## GUIA 2
+
+# Problema 4.1
+def f(x):
+    return 1.85*x
+
+# Problema 4.2
+# dependiente = distancia
+# intependiente = horas
+
+# Problema 4.5
+# print()
+# print("Al transcurrir 148 horas, Se instalaron", f(148)*1000, "metros de cable")
+# print("Al transcurrir 2300 horas, se instalaron", f(2300)*1000, "metros de cable")
+
+# Problema 4.6
+# 3480=1.85x
+# 0=1.85x-3480 funcion para fsolve
+
+def f(x):
+    return 1.85*x-3480
+
+#Valor/es inicial/es de la aproximación
+xo = np.linspace(0, 1000000, 1)
+solucion = fsolve(f, xo)
+print(f"Al instalar 3480 km de cable, han transcurrido {solucion} horas de trabajo")
