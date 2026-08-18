@@ -9,8 +9,8 @@
 # 1,5 minutos
 # 1 hora
 
-def f(a):
-    return 100*a
+# def f(a):
+#     return 100*a
 
 # print(f"A los 45 segundos se transmiten {f(45)} mb.")
 # print(f"A los 1.5 segundos se transmiten {f(1.5*60)} mb.")
@@ -50,9 +50,26 @@ def f(a):
 
 # c)   74 milisegundos.
 
-def l(a):
-    return 1.2*a
+# def l(a):
+#     return 1.2*a
 
-print(f"A los 200 milisegundos se transmiten {l(200)} mb.")
-print(f"A los 149 milisegundos se transmiten {l(149)} mb.")
-print(f"A los 74 milisegundos se transmiten {l(74)} mb.")
+# print(f"A los 200 milisegundos se transmiten {l(200)} mb.")
+# print(f"A los 149 milisegundos se transmiten {l(149)} mb.")
+# print(f"A los 74 milisegundos se transmiten {l(74)} mb.")
+
+# def p(t):
+#     return -90*t+15000
+
+# print(p(60))
+
+import numpy as np
+from scipy.optimize import fsolve
+
+# def f(x):
+#     return -90*x+15000-8250
+# xo = np.linspace(0, 80, 1)
+# solucion = fsolve(f,xo)
+# print(solucion[0])
+
+
+
