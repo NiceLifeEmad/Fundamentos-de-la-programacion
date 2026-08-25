@@ -1,4 +1,5 @@
 import numpy as np
+import matplotlib.pyplot as plt
 from scipy.optimize import fsolve
 
 ## Problema 1
@@ -85,8 +86,8 @@ from scipy.optimize import fsolve
 ## GUIA 2
 
 # Problema 4.1
-def f(x):
-    return 1.85*x
+# def f(x):
+#     return 1.85*x
 
 # Problema 4.2
 # dependiente = distancia
@@ -101,10 +102,109 @@ def f(x):
 # 3480=1.85x
 # 0=1.85x-3480 funcion para fsolve
 
-def f(x):
-    return 1.85*x-3480
+# def f(x):
+#     return 1.85*x-3480
 
 #Valor/es inicial/es de la aproximación
-xo = np.linspace(0, 1000000, 1)
-solucion = fsolve(f, xo)
-print(f"Al instalar 3480 km de cable, han transcurrido {solucion} horas de trabajo")
+# xo = np.linspace(0, 1000000, 1)
+# solucion = fsolve(f, xo)
+# print(f"Al instalar 3480 km de cable, han transcurrido {solucion} horas de trabajo")
+
+
+
+## Problema 5
+
+##Pregunta 5.1
+# def f(t):
+#     return 0.4*t
+
+# def g(t):
+#     return 0.3*t
+
+# t = np.arange(0, 30, 1)
+# plt.plot(t, f(t), label = 'f(t)')
+# plt.plot(t, g(t), label = 'g(t)')
+# plt.title('Distancia recorrida en km/min')
+# plt.ylabel('Distancia recorrida(Km)')
+# plt.xlabel('Tiempo Transcurrido(min)')
+# plt.legend()
+# plt.show()
+
+##Pregunta 5.2
+#Dominio: Inicio = 0
+#         Fin = 1.2*9+0.5*8
+
+##Pregunta 5.3
+#El metro es mas rapido en este caso, dado que en la misma cantidad de tiempo recorre una mayor distancia que la micro
+
+##Pregunta 5.4
+#En metro son 15 minutos aprox y en micro 22 minutos aprox
+
+##Pregunta 6
+#Pregunta 6.1
+# Dependiente = Temperatura
+# Independiente = Tiempo
+
+#Pregunta 6.2
+#Dominio contextualizado: [0, 9] hrs
+
+#Pregunta 6.3
+def T(t):
+    return -0.5*t**2+3*t+20
+
+# t = np.arange(0, 9, 0.01)
+# plt.plot(t, T(t), label = 'f(t)')
+# plt.title('Temperatura del servidor durante la jornnada laboral')
+# plt.ylabel('Temperatura (°C)')
+# plt.xlabel('Tiempo Transcurrido (hrs)')
+# plt.legend()
+# plt.grid(True)
+# plt.show()
+
+
+#Pregunta 6.4
+
+# maxima = T(3)
+
+# print ("La temperatura maxima se alcanza luego de 3 horas laborales, es decir, a las 11:00 hrs, y es de: ", maxima)
+
+#Pregunta 6.5
+
+# trece = T(5)
+# final = T(9)
+
+# print (f"La temperatura a las 13:00 es de {trece} y la temperatura al final de la jornada es de {final}.")
+
+##Pregunta 7
+#Pregunta 7.1
+# Dependiente: Numero de usuarios en unidades
+# Independiente: Tiempo transcurrido en meses
+
+#Pregunta 7.2
+def U(t):
+    return 1000/(1+9*np.exp(-0.5*t))
+
+# doce = U(12)
+
+# print (f"Transcurridos 12 meses habra {doce.round(0)} usuarios de la red social")
+
+#Pregunta 7.3
+
+# t = np.arange(0, 24, 0.01)
+# plt.plot(t, U(t), label = 'U(t)')
+# plt.title('Cantidad de usuarios en 2 años')
+# plt.ylabel('Usuarios (Unidad)')
+# plt.xlabel('Tiempo transcurrido (Meses)')
+# plt.legend()
+# plt.show()
+
+#Prgunta 7.4
+
+def N(t):
+    return U(t)-800
+
+#Valor/es inicial/es de la aproximación
+xo = np.linspace(0, 24, 1)
+solucion = fsolve(N, xo)
+
+print(f"Para que la red social llegue a los 800 usuarios deben transcurir {solucion[0].round(2)} meses.")
