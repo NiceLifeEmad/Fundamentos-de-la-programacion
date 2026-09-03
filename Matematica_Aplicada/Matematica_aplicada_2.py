@@ -101,10 +101,78 @@ from scipy.optimize import fsolve
 # plt.legend()
 # plt.show()
 
+##Problema 3
+#Problema 3.1
 
+# x = np.array([50, 100, 250, 500, 1000])
+# y1 = np.array([10, 20, 50, 100, 200])
+# y2 = np.array([8, 16, 40, 80, 160])
+# #Si la función es de grado 1
+# pendiente1, intercepto1 = np.polyfit(x, y1, 1)
+# pendiente2, intercepto2 = np.polyfit(x, y2, 1)
 
+# print(f"f(x)= {pendiente1.round(2)}x + {intercepto1.round(2)}")
+# print(f"f(x)= {pendiente2.round(2)}x + {intercepto2.round(2)}")
 
+#f(x)=0.2x  // Tiempo de Carga
+#g(x)=0.16x // Tiempo de Descarga
 
+#Problema 3.2
+
+# Variable dependiente: Tiempo de carga (s) y Tiempo de descarga (s)
+# Variable independiente: Tamaño del archivo (MB)
+
+#Problema 3.3
+
+# def f(x):
+#     return 0.2*x
+
+# def g(x):
+#     return 0.16*x
+
+# print (f"Para un archivo de 750 Mb, el tiempo de carga es {f(750)} segundos y el tiempo de descarga es {g(750)} segundos ")
+
+#Problema 3.4
+
+# def f(x):
+#     return 0.2*x-163
+
+# #Valor/es inicial/es de la aproximación
+# xo = np.linspace(0, 200, 1)
+# solucion = fsolve(f, xo)
+
+# print(f"Si el tiempo de carga es de 163 segundos, el tamaño del archivo debe ser {solucion} Mb")
+
+#Problema 3.5
+
+# def f(x):
+#     return 0.16*x-195
+
+# #Valor/es inicial/es de la aproximación
+# xo = np.linspace(0, 200, 1)
+# solucion = fsolve(f, xo)
+
+# print(f"Si el tiempo de descarga es de 195 segundos, el tamaño del archivo debe ser {solucion} Mb")
+
+#Problema 3.6
+
+# def f(x):
+#     return 0.2*x
+
+# def g(y):
+#     return 0.16*y
+
+# x = np.arange(0, 1500, 0.01)
+# y = np.arange(0, 1500, 0.01)
+# plt.plot(x, f(x), label = 'Tiempo de Carga (Mb)')
+# plt.plot(y, g(y), label = 'Tiempo de Descarga (Mb)')
+# plt.title('Velocidad de Carga y Descarga en relacion al tamaño del archivo')
+# plt.ylabel('Tiempo transcurrido (s)')
+# plt.xlabel('Tamaño del Archivo (Mb)')
+# plt.legend()
+# plt.show()
+
+##Problema 4
 #Problema 4.1
 
 # Variable dependiente: Uso de memoria (GB)
@@ -120,31 +188,49 @@ from scipy.optimize import fsolve
 
 #Problema 4.4
 
-def suma(x):
-    return 0.5*x+2
+# def suma(x):
+#     return 0.5*x+2
 
-# resultado = suma(637)
+# # resultado = suma(637)
 
-# print (f"Se usan {resultado} GB cuando hay 637 usuarios activos")
+# # print (f"Se usan {resultado} GB cuando hay 637 usuarios activos")
 
-#Problema 4.5
+# #Problema 4.5
 
-def f(y):
-    return 0.5*y+2-32
+# def f(y):
+#     return 0.5*y+2-32
 
-#Valor/es inicial/es de la aproximación
-xo = np.linspace(0, 50, 1)
-solucion = fsolve(f, xo)
+# #Valor/es inicial/es de la aproximación
+# xo = np.linspace(0, 50, 1)
+# solucion = fsolve(f, xo)
 
-print(f"Para usar 32 GB de memori9a debe haber {solucion} usuarios activos")
+# print(f"Para usar 32 GB de memori9a debe haber {solucion} usuarios activos")
 
-#Problema 4.6
+# #Problema 4.6
 
-def f(y):
-    return 0.5*y+2-59.8
+# def f(y):
+#     return 0.5*y+2-59.8
 
-#Valor/es inicial/es de la aproximación
-xo = np.linspace(0, 50, 1)
-solucion = fsolve(f, xo)
+# #Valor/es inicial/es de la aproximación
+# xo = np.linspace(0, 50, 1)
+# solucion = fsolve(f, xo)
 
-print(f"No, porque para que hubiesen 59.8 GB de uso en el servidor, deberian haber {solucion} usuarios, lo cual no es posible")
+# print(f"No, porque para que hubiesen 59.8 GB de uso en el servidor, deberian haber {solucion} usuarios, lo cual no es posible")
+
+
+##Problema 8
+#Problema 8.1
+
+x = np.array([0, 20, 40, 60, 80])
+y = np.array([2, 3, 4, 5, 6])
+#Si la función es de grado 1
+pendiente, intercepto = np.polyfit(x, y, 1)
+
+print (f"T(x)= {pendiente:.2f}x + {intercepto:.2f}")
+
+#Problema 8.2
+
+def f(x):
+    return 0.05*x+2
+
+#Problema 8.3
