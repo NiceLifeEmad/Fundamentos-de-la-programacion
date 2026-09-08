@@ -217,20 +217,153 @@ from scipy.optimize import fsolve
 
 # print(f"No, porque para que hubiesen 59.8 GB de uso en el servidor, deberian haber {solucion} usuarios, lo cual no es posible")
 
+##Problema 7
+#Problema 7.1
+
+# Variable dependiente: Valor residual (Miles de dolares)
+# Variable independiente: Antiguedad (Años)
+
+#Problema 7.2
+
+#En cuanto varia el valor residual a medida que pasan los años, siendo la pendiente igual a: -1.2
+
+#Problema 7.3
+
+# Es igual a 10.000 dolares, dado que N es igual a 10
+
+#Problema 7.4
+
+# El dominio contextualizado es de: 0 a 8 años
+
+#Problema 7.5
+
+# def f(x):
+#     return -1.2*x+10
+
+# print(f"El valor del equipo residual con 3 años y seis meses de antiguedad es de {f(3.5)} miles de dolares")
+
+#Problema 7.6
+
+# def f(x):
+#     return -1.2*x+10-4000
+
+# #Valor/es inicial/es de la aproximación
+# xo = np.linspace(0, 5000, 1)
+# solucion = fsolve(f, xo)
+
+# print(solucion)
+
+#Problema 7.7
+
+# def f(x):
+#     return -1.2*x+10
+
+# x = np.arange(0, 100, 0.01)
+# plt.plot(x, f(x), label = 'f(x)')
+# plt.title('Valor residual del equipo')
+# plt.ylabel('Valor residual (Miles de dolares)')
+# plt.xlabel('Tiempo transcurrido (Años)')
+# plt.legend()
+# plt.show()
+
 
 ##Problema 8
 #Problema 8.1
 
-x = np.array([0, 20, 40, 60, 80])
-y = np.array([2, 3, 4, 5, 6])
-#Si la función es de grado 1
-pendiente, intercepto = np.polyfit(x, y, 1)
+# x = np.array([0, 20, 40, 60, 80])
+# y = np.array([2, 3, 4, 5, 6])
+# #Si la función es de grado 1
+# pendiente, intercepto = np.polyfit(x, y, 1)
 
-print (f"T(x)= {pendiente:.2f}x + {intercepto:.2f}")
+# print (f"T(x)= {pendiente:.2f}x + {intercepto:.2f}")
 
-#Problema 8.2
+# #Problema 8.2
 
-def f(x):
-    return 0.05*x+2
+# def f(x):
+#     return 0.05*x+2
 
 #Problema 8.3
+
+
+##Problema 10
+#Problema 10.1
+
+#Atleta 1
+# def f(x):
+#     return 0.7*x**2
+
+# #Atleta 2
+# def g(y):
+#     return 10*y
+
+# x = np.arange(0, 10, 0.01)
+# y = np.arange(0, 10, 0.01)
+# plt.plot(x, f(x), label = 'Atleta 1')
+# plt.plot(y, g(y), label = 'Atleta 2')
+# plt.title('Relacion entre distancia recorrida y el tiempo transcurrido')
+# plt.ylabel('Distancia recorrida (Metros)')
+# plt.xlabel('Tiempo Transcurrido (Seg)')
+# plt.legend()
+# plt.show()
+
+#El atleta 2 mantuvo una velocidad constante en aumento
+
+#Problema 10.2
+
+#El atleta 2 segun lo observado en el grafico llego a los 100 metros tras 10 segundos
+
+#Problema 10.3
+
+# distancia8= g(8) - f(8)
+
+# distancia10= g(10) - f(10)
+
+# print(f"A los 8 segundos se encontraban a {distancia8} m de distancia")
+# print(f"A los 10 segundos se encontraban a {distancia10} m de distancia")
+
+#Problema 10.4
+
+# distancia = f(10)-f(8)
+
+# velocidad= distancia/2
+
+# print(f"El atleta 1 tenia una velocidad de {velocidad} m/s entre los 8 y 10 segundos")
+
+#El atleta 1 iba mas rapido, con una velocidad de 12.6 m/s, mientras que el atleta 2 tenia una velocidad de 10 m/s
+
+
+##Problema 11
+#Problema 11.1
+
+#Empresa 1
+# def f(x):
+#     return 12*x+50
+
+# #Empresa 2
+# def g(y):
+#     return 8*y+100
+
+# x = np.arange(0, 50, 0.01)
+# y = np.arange(0, 50, 0.01)
+# plt.plot(x, f(x), label = 'Empresa 1')
+# plt.plot(y, g(y), label = 'Empresa 2')
+# plt.title('Relacion entre el costo de desarrollo y el tiempo de desarrollo')
+# plt.ylabel('Costo de desarrollo (Millones de pesos)')
+# plt.xlabel('Tiempo de desarrollo (Semanas)')
+# plt.legend()
+# plt.show()
+
+#Problema 11.2
+
+# def f(x):
+#     return 12*x+50-155
+
+# #Valor/es inicial/es de la aproximación
+# xo = np.linspace(0, 20, 1)
+# solucion = fsolve(f, xo)
+
+# print(f"Pagando 155 millones a la empresa 1 el proyecto tardara {solucion} semanas")
+
+#Problema 11.3
+
+#Si el proyecto demorara menos de 12.5, la empresa 1 es mejor, en caso contrario, la empresa 2 es mejor
