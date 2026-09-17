@@ -89,6 +89,46 @@ from scipy.optimize import fsolve
 # solucion = fsolve(h, xo)
 # print(f"h(x) es igual a 50 cuando x es igual a {solucion}")
 
+##Problema 3
+#Problema 3.1
+
+# def w(x):
+#     return 0.6*x**2+1.5
+
+# def t(x):
+#     return 0.8*x**3-10*x+10
+
+# x = np.arange(-3, 4, 0.01)
+# plt.plot(x, w(x), label = 'w(x)')
+# plt.plot(x, t(x), label = 't(x)')
+# plt.title('Relacion entre w(x) y t(x)')
+# plt.ylabel('Nombre eje y')
+# plt.xlabel('Nombre eje x')
+# plt.xlim(-3,4)
+# plt.ylim(-4,24)
+# plt.grid(True)
+# plt.legend()
+# plt.show()
+
+#Problema 3.2
+
+# def f(x):
+#     return w(x) - t(x)
+
+# #Valor/es inicial/es de la aproximación
+# xo = np.linspace(0, 4, 2)
+# solucion = fsolve(f, xo)
+# print (f"La funcion w(x) es mayor o igual a la funcion t(x) cuando x toma los valores entre: {solucion[0]:.2f} y {solucion[1]:.2f}")
+
+#Problema 3.3
+
+# def f(x):
+#     return t(x) - 6
+
+# #Valor/es inicial/es de la aproximación
+# xo = np.linspace(-3, 4, 3)
+# solucion = fsolve(f, xo)
+# print(f"t(x) es igual a 6 cuando x toma los valores {solucion[1]:.2f} y {solucion[2]:.2f}")
 
 
 ##Problema 4
@@ -98,14 +138,14 @@ from scipy.optimize import fsolve
 
 #problema 4.2
 
-def C(x):
-    return 19493*np.exp(0.01*x)
+# def C(x):
+#     return 19493*np.exp(0.01*x)
 
-def E(x):
-    return 17575*np.exp(0.012*x)
+# def E(x):
+#     return 17575*np.exp(0.012*x)
 
-def H(x):
-    return 10117*np.exp(0.015*x)
+# def H(x):
+#     return 10117*np.exp(0.015*x)
 
 # x = np.arange(0, 150, 0.01)
 # plt.plot(x, C(x), label = 'Chile')
@@ -187,3 +227,59 @@ def H(x):
 
 #En la semana 5 no conviene mantener la campaña, ya que los costos son mas altos que los ingresos. 
 #En general, conviene mantener la campaña hasta las 2.27 semanas.
+
+
+##Problema 7
+#Problema 7.1
+
+# def I(x):
+#     return 10*x**2+50*x
+
+# def C(x):
+#     return 5*x**2+80*x+100
+
+# x = np.arange(0, 10, 0.01)
+# plt.plot(x, C(x), label = 'C(x)')
+# plt.plot(x, I(x), label = 'I(x)')
+# plt.title('Relacion entre suscriptor y costos e ingresos')
+# plt.ylabel('Dinero (Miles de pesos)')
+# plt.xlabel('Numero de suscriptores (Miles)')
+# plt.legend()
+# plt.show()
+
+# def f(x):
+#     return C(x) - I(x)
+
+# #Valor/es inicial/es de la aproximación
+# xo = np.linspace(0, 10, 2)
+# solucion = fsolve(f, xo)
+# # valores = np.unique(solucion)
+# print(f"El equilibrio entre ingresos por suscriptor y costos de operacion ocurren cuando hay {solucion[1]:.2f} mil suscriptores")
+
+#Problema 7.2
+
+#Analizando el grafico y el punto de equilibrio obtenido, los costos de operacion son mayores a los ingresos por suscriptor cuando
+#estos ultimos son menores a 8.39 mil suscriptores
+
+
+
+
+##Problema 9
+#Problema 9.1
+
+def f(x):
+    return np.sqrt(500*x+2000)
+
+def g(x):
+    return np.sqrt(800*x+1000)
+
+x = np.arange(0, 10, 0.01)
+plt.plot(x, f(x), label = 'f(x)')
+plt.plot(x, g(x), label = 'g(x)')
+plt.title('Relacion entre suscriptor y costos e ingresos')
+plt.ylabel('tasa de crecimiento (mm/dia)')
+plt.xlabel('Intensidad de la luz (lux)')
+plt.legend()
+plt.show()
+
+#Problema 9.2
