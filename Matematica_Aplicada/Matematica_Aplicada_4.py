@@ -130,3 +130,78 @@ import numpy as np
 # else:
 #     print(f'El {final} no pertenece a la sucesión')
 
+
+##Problema 5
+#Problema 5.1
+
+# sucesion = []
+# for i in range(7):
+#     n = i + 1
+#     sucesion.append(575*1.15**(n-1))
+#     print(f'El mes {n} es {sucesion[-1]:.0f}')
+
+#Problema 5.2
+
+# sucesion = []
+# for i in range(13):
+#     n = i + 1
+#     sucesion.append(500*1.15**(n-1))
+#     print(f'El mes {i} es {sucesion[i]:.0f} usuarios.')
+
+#Problema 5.3
+
+# sucesion = []
+# for i in range(13):
+#     n = i + 1
+#     sucesion.append(500*1.15**(n-1))
+#     # print(f'El mes {i} es {sucesion[i]:.0f} usuarios.')
+
+# suma = sum(sucesion)
+# print(f'Luego de un año la cantidad total de usuarios seria {suma:.0f}.') 
+
+##Problema 6
+#Problema 6.1
+
+# sucesion = []
+# for i in range(0, 12):
+#     n = i + 1
+#     sucesion.append(12000+(n-1)*2000)
+#     print(f'El término {n} es {sucesion[-1]}')
+
+#Problema 6.2
+
+# sucesion = []
+# for i in range(0, 14):
+#     n = i + 1
+#     sucesion.append(12000+(n-1)*2000)
+
+# print(f'En febrero del segundo año el deposito es {sucesion[-1]} pesos')
+
+#Problema 6.3
+
+# sucesion = []
+# for i in range(0, 24):
+#     n = i + 1
+#     sucesion.append(12000+(n-1)*2000)
+#     # print(f'El término {n} es {sucesion[-1]}')
+
+# suma = sum(sucesion)
+# print(f'El total ahorrado luego de dos años es de ${suma} pesos.') 
+
+
+##Problemas 7
+#Problema 7.1
+ 
+# sucesion = []
+# for i in range(5):
+#     n = i + 1
+#     sucesion.append(3*0.9**(n-1))
+#     print(f'La fase numero {n} dura {sucesion[-1]:.2f} meses') 
+ 
+#Problema 7.2 
+
+# sucesion = []
+# for i in range(10):
+#     n = i + 1
+#     sucesion.append(3*0.9**(n-1))
+#     print(f'La fase numero {n} dura {sucesion[-1]:.2f} meses') 
