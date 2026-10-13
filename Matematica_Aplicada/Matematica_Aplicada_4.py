@@ -205,3 +205,166 @@ import numpy as np
 #     n = i + 1
 #     sucesion.append(3*0.9**(n-1))
 #     print(f'La fase numero {n} dura {sucesion[-1]:.2f} meses') 
+
+##Problema 8
+#Problema 8.1
+
+# a_10=20
+# -20=a_1+(10-1)*4
+# -20=a_1+9*4
+# -20=a_1+36
+# -20-36=a_1
+# -56=a_1
+
+#Problema 8.2
+
+# La expresion general es a_n = -56 + (n-1)*4
+
+#Problema 8.3
+
+# sucesion = []
+# for i in range(0,100):
+#     n = i + 1
+#     sucesion.append(-56+(n-1)*4)
+    
+# print(f'El término 100 es {sucesion[99]}')
+
+#Problema 8.4
+
+# final=1680 
+# termino=0
+# n=0
+# dif=final-termino
+# while dif>0:
+#     n +=1
+#     termino=-56+(n-1)*4
+#     dif=final-termino
+
+# if dif==0:
+#     print(f'El {final} es un término de la sucesión y ocupa el lugar {n}')
+
+# else:
+#     print(f'El {final} no pertenece a la sucesión')
+
+##Problema 9
+#Problema 9.1
+
+#a_1->a_2->a_3->a_4->a_5->a_6
+#           5 ->*r ->*r ->*r = 40
+#5*r**3=40
+#r**3=40/5
+#r**3=8
+#r=raiz cubica de 8
+#r=2
+#La razon geometrica es 2
+
+#Problema 9.2
+
+#a_3=5
+#a_2=5/2
+#a_2=2.5
+#a_1=2.5/2
+#a_1=1.25
+
+#Problema 9.3
+
+#1.25*2**(n-1)
+
+#Problema 9.4
+
+# sucesion = []
+# for i in range(10):
+#     n = i + 1
+#     sucesion.append(1.25*2**(n-1))
+    
+# print(f'El término 8 es {sucesion[7]}')
+
+#Problema 9.5
+
+# final=20480
+# termino=0
+# n=0
+# dif=final-termino
+# while dif>0:
+#     n +=1
+#     termino=1.25*2**(n-1)
+#     dif=final-termino
+
+# if dif==0:
+#     print(f'El {final} es un término de la sucesión y ocupa el lugar {n}')
+
+# else:
+#     print(f'El {final} no pertenece a la sucesión')^
+
+##Problema 10
+#Problema 10.1
+
+#r_2= 1.2
+#r_5= 2.7
+
+#1.2*r**3=2.7
+#r**3=2.7/1.2
+#r**3=2.25
+#r=2.25**(1/3)
+#r=1.31
+#a_1=a_2/r
+#a_1=1.2/1.31
+#a_1=0.92
+
+# sucesion = []
+# for i in range(13):
+#     n = i + 1
+#     sucesion.append(0.92*1.31**(n-1))
+#     print(f'El término {n} es {sucesion[i]:.2f}')
+
+# print(f'El término 9 es {sucesion[8]:.2f}')
+
+#Problema 10.2
+
+#En el decimo tercer mes, el rendimiento es de 23.4 miles de TPS
+
+##Problema 11
+#Problema 11.1
+
+#a_3=500
+#a_10=1501
+#a_3+7x=1501
+#500+7x=1501
+#7x=1501-500
+#7x=1001
+#x=1001/7
+#x=143
+#d=143
+#a_1=a_3-(2d)
+#a_1=500-(143*2)
+#a_1=500-286
+#a_1=214
+
+#Problema 11.2
+
+# sucesion = []
+# for i in range(31):
+#     n = i + 1
+#     sucesion.append(214+(n-1)*143)
+    
+# print(f'El término 31 es {sucesion[30]}')
+
+
+#Problema 11.3
+
+# final=5505 
+# termino=0
+# n=0
+# dif=final-termino
+# while dif>0:
+#     n +=1
+#     termino=214+(n-1)*143
+#     dif=final-termino
+
+# if dif==0:
+#     print(f'El {final} es un término de la sucesión y ocupa el lugar {n}')
+
+# else:
+#     print(f'El {final} no pertenece a la sucesión')
+
+# print(f"La aplicacion lleva funcionando un mes y 7 dias")
