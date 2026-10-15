@@ -368,3 +368,104 @@ import numpy as np
 #     print(f'El {final} no pertenece a la sucesión')
 
 # print(f"La aplicacion lleva funcionando un mes y 7 dias")
+
+
+##Problema 12
+#Problema 12.1
+
+#a_2=402000
+#a_3=404010
+#a_2*r=a_3
+#402000*r=404010
+#r=404010/402000
+#r=1.005
+#a_1=a_2/r
+#a_1=402000/1.005
+#a_1=400000
+#Formula general: a_n=400000*1.005**(n-1)
+
+# sucesion = []
+# for i in range(10):
+#     n = i + 1
+#     sucesion.append(400000*1.005**(n-1))
+    
+# print(f'En el decimo mes le pagaran ${sucesion[9]:.0f}')
+
+# #Problema 12.2
+
+# sucesion = []
+# for i in range(24, 36):
+#     n = i + 1
+#     sucesion.append(400000*1.005**(n-1))
+#     # print(f'El término {n} es {sucesion[i]}')
+
+# suma = sum(sucesion)
+# print(f'La suma de los pagos del tercer año es ${round(suma, 0)}.') 
+
+##Problema 13
+#Problema 13.1
+
+#Formula general: 30*2**(n-1)
+
+# sucesion = []
+# for i in range(8):
+#     n = i + 1
+#     sucesion.append(30*2**(n-1))
+    
+# print(f'En el octavo trimestre habrian capacitado {sucesion[7]} empleados')
+
+#Problema 13.2
+
+# sucesion = []
+# for i in range(12):
+#     n = i + 1
+#     sucesion.append(30*2**(n-1))
+#     # print(f'El término {n} es {sucesion[i]}')
+
+# suma = sum(sucesion)
+# print(f'La cantidad total de empleados capacitados es {suma}.') 
+
+##Problema 14
+#Problema 14.1
+
+#a_4=128
+#a_9=88
+#a_4-d*5=a_9
+#128-d*5=88
+#128-88=5d
+#40=5d
+#40/5=d
+#8=d
+#a_1-3*8=128
+#a_1-24=128
+#a_1=128+24
+#a_1=152
+
+#Termino General: a_n=152-(n-1)*8
+
+
+# final=0 
+# termino=152
+# n=0
+# dif=termino-final
+# while dif>0:
+#     n +=1
+#     termino=152-(n-1)*8
+#     dif=termino-final
+
+# if dif==0:
+#     print(f'El {final} es un término de la sucesión y ocupa el lugar {n}')
+
+# else:
+#     print(f'El {final} no pertenece a la sucesión')
+
+# #Problema 14.2
+
+# sucesion = []
+# for i in range(20):
+#     n = i + 1
+#     sucesion.append(152-(n-1)*8)
+#     # print(f'El término {n} es {sucesion[i]}')
+
+# suma = sum(sucesion)
+# print(f'El total de litros recibidos por el tambor es {suma}.') 
