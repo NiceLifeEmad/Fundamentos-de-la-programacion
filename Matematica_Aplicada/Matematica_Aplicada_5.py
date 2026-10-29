@@ -70,31 +70,76 @@ import numpy as np
 ##Problema 3
 #Problema 3.1
 
-C = np.array([[120,200,155,125,230],
-              [155,130,110,160,180],
-              [140,205,150,125,155],
-              [130,120,230,225,125],
-              [135,70,190,175,95],
-              [110,265,180,230,180],
-              [185,85,120,135,150]])
+# C = np.array([[120,200,155,125,230],
+#               [155,130,110,160,180],
+#               [140,205,150,125,155],
+#               [130,120,230,225,125],
+#               [135,70,190,175,95],
+#               [110,265,180,230,180],
+#               [185,85,120,135,150]])
 
-E = C*0.8
+# E = C*0.8
 
-print(E)
+# print(E)
 
-#Problema 3.2
+# #Problema 3.2
 
-#T=C_ij+E_ij
+# #T=C_ij+E_ij
 
-#Problema 3.3
+# #Problema 3.3
 
-T = C+E
-print(T)
+# T = C+E
+# print(T)
 
-#Problema 3.4
+# #Problema 3.4
 
-c34=C[2][3]
-print(c34)
+# c34=C[2][3]
+# print(c34)
 
-t72=T[6][1]
-print(t72)
+# t72=T[6][1]
+# print(t72)
+
+##Problema 5
+
+# M = np.fromfunction(lambda i, j: 8*(i+1)+12*(j+1), (8,9))
+# TM=M.T
+# print("La matriz es: ")
+# print(M)
+# print("La matriz transpuesta es: ")
+# print(TM)
+
+
+##Problema 6
+
+# A = np.fromfunction(lambda i, j: (i+1)*(j+1), (5,7))
+# B = np.fromfunction(lambda i, j: 15*(i+1)-2*(j+1), (7,5))
+# AT=A.T
+# C=AT+1/2*B
+# # print(A)
+# # print(B)
+# print(C)
+
+##Problema 7
+#Problema7.1
+
+# D = np.array([[20,28,22,26,24],
+#               [52,57,56,54,58],
+#               [1066,1068,1066,1064,1068]])
+# S=D*0.95
+# print("Los valores correctos son: ")
+# print(S)
+
+# #Problema7.2
+
+# T = S.T
+# print("La matriz transpuesta es: ")
+# print(T)
+
+# #Problema7.3
+
+# S24=S[1][3]
+# ST31=T[2][0]
+# print(S24)
+# print(ST31)
+
+
